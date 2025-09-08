@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vinicius">
+    <meta name="description" content="Abordando sobre programação voltada
+     para Web, especficamente APIs e integrações.">
+    <meta name="keywords" content="Web Programming, API integration,
+      endpoint">
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>PROGRAMAÇÃO PARA WEB: APIs e integrações</title>
+</head>
+
+<body>
+    <header class="bgnav">
+        <nav class="nav-main">
+            <div>
+                <a href="#main-subject" class="nav-title">APIs e Integrações</a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#abstract" class="nav-link">Introdução</a></li>
+                    <li class="nav-item"><a href="#explain" class="nav-link">O que são APIs?</a></li>
+                    <li class="nav-item"><a href="#protocols" class="nav-link">Protocolos</a></li>
+                    <li class="nav-item"><a href="#architectures" class="nav-link">Arquiteturas</a></li>
+                    <li class="nav-item"><a href="#api-types" class="nav-link">Tipos</a></li>
+                    <li class="nav-item"><a href="#api-tools" class="nav-link">Ferramentas</a></li>
+                    <li class="nav-item"><a href="#exemples" class="nav-link">Exemplos</a></li>
+                    <li class="nav-item"><a href="#conclusion" class="nav-link">Conclusão</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="abstract" id="abstract">
+            <h1>Introdução</h1>
+            <p>&ensp; Atualmente, a evolução tecnológica tem proporcionado diversas ferramentas e
+                arquiteturas para o desenvolvimento de sistemas, o que resultou em uma grande
+                variedade de padrões. É comum encontrarmos sistemas com estruturas em camadas
+                bem definidas, assim como outros organizados em uma arquitetura monolítica.
+                Um dos principais avanços que acompanham essas mudanças estruturais são as APIs,
+                que permitem a comunicação entre diferentes sistemas por meio de uma interface
+                padronizada.
+            </p>
+            <p>
+                &ensp; As APIs (Application Programming Interface), traduzidas literalmente como
+                “Interface de Programação de Aplicações”, funcionam como pontes que conectam
+                sistemas distintos. Essa comunicação se dá, geralmente, por meio de requisições
+                (requests) e respostas (responses), seguindo um conjunto de regras e protocolos
+                como HTTP, HTTPS ou TCP, que garantem uma troca de dados segura e organizada.
+            </p>
+            <p>
+                &ensp; Além disso, existem diferentes tipos de APIs, cada uma adequada a contextos
+                específicos. A escolha do tipo de API pode variar conforme a necessidade do
+                sistema, como, por exemplo, em uma aplicação web, que pode demandar uma API
+                diferente da utilizada por um serviço de e-mail.
+            </p>
+            <p>
+                &ensp; Portanto, decisões como o tipo de API, o protocolo de comunicação e a estrutura
+                do projeto dependem diretamente da complexidade do problema a ser resolvido.
+                Em projetos mais robustos, é comum o uso da arquitetura em camadas, onde cada
+                camada possui uma responsabilidade bem definida. Em muitos casos, uma dessas
+                camadas é dedicada ao controle das APIs, sendo frequentemente chamada de “controller”.
+            </p>
+        </section>
+
+        <hr>
+        <h1 class="main-title" id="main-subject">APIs e Integrações</h1>
+        <div class="api-image">
+            <img src="images/api-image.jpg" alt="imagem API" title="api-image" />
+        </div>
+
+        <section class="apis-explain" id="explain">
+            <h2>O que são as APIs?</h2>
+            <p>
+                &ensp; As APIs (Application Programming Interface) são interfaces que permitem a comunicação entre
+                diferentes
+                sistemas. Ela funciona como um conjunto de regras que define como essa troca de informações deve
+                acontecer.
+            </p>
+            <p>
+                &ensp; Por meio de protocolos como HTTP, a API recebe requisições e responde com dados em formatos
+                padronizados,
+                como JSON. Assim, um sistema pode acessar informações ou funcionalidades de outro sem precisar saber
+                como
+                ele foi construído.
+            </p>
+            <p>
+                &ensp; Entre os principais benefícios estão: integração facilitada, redução de complexidade e acesso sob
+                demanda a
+                dados, sem necessidade de armazenamento local.
+            </p>
+        </section>
+        <hr>
+        <section class="apis-protocols" id="protocols">
+            <h2>Protocolos de APIs</h2>
+            <p>&ensp; Os protocolos de API definem as regras e convenções que orientam como deve ocorrer a comunicação
+                entre
+                sistemas. Eles determinam como as requisições devem ser feitas, quais métodos podem ser utilizados e
+                como as
+                respostas devem ser formatadas.
+            </p>
+            <p>
+                &ensp; Esses protocolos funcionam como uma linguagem comum entre quem consome a API e quem a fornece.
+                Além de
+                padronizar a troca de dados, eles especificam o que pode ser requisitado, de que forma e em qual
+                estrutura
+                os dados serão retornados.
+            </p>
+            <p>
+                &ensp; Entender os protocolos é essencial para garantir que a integração entre sistemas aconteça de
+                forma
+                segura,
+                eficiente e compatível.
+            </p>
+        </section>
+        <hr>
+        <section class="Architectures-and-protocol-styles" id="architectures">
+            <h2>Arquiteturas e estilos de protocolo</h2>
+            <p>
+                &ensp; Entre os estilos mais utilizados na criação de APIs, o REST (Representational State Transfer) é
+                um dos
+                mais
+                comuns. Ele segue princípios que tornam as APIs mais simples, leves e baseadas em requisições HTTP. Uma
+                API
+                construída seguindo esses princípios é chamada de API RESTful.
+            </p>
+            <p>
+                &ensp; Essas APIs operam com métodos como GET, POST, PUT e DELETE, que representam ações de leitura,
+                criação,
+                atualização e remoção de dados, respectivamente. O uso desses métodos ajuda a manter uma estrutura
+                padronizada, facilitando a integração com diferentes sistemas.
+            </p>
+            <p>
+                &ensp; Além do REST, existem outros estilos, como SOAP, que é mais complexo e baseado em XML, geralmente
+                usado
+                em
+                sistemas corporativos, e GraphQL, que permite consultas mais flexíveis, onde o cliente pode definir
+                exatamente quais dados deseja receber.
+            </p>
+            <p>
+                &ensp; Cada arquitetura possui vantagens e se encaixa melhor em determinadas necessidades, sendo
+                importante
+                conhecê-las para escolher a mais adequada ao projeto.
+            </p>
+        </section>
+        <hr>
+        <section class="apis-types" id="api-types">
+            <h2>Tipos de APIs</h2>
+            <p>&ensp; As APIs podem ser classificadas de acordo com o nível de acesso que oferecem e os públicos a que
+                se
+                destinam.
+                Veja abaixo os principais tipos:
+            </p>
+            <article><b>Privada</b>: Usada apenas dentro da empresa. Garante mais controle e segurança interna.
+            </article>
+            <article><b>De Parceiros</b>: Compartilhada com parceiros específicos. Permite integrações comerciais sem
+                abrir
+                tudo ao
+                público.
+            </article>
+            <article><b>Pública</b>: Disponível para qualquer desenvolvedor. Estimula a criação de novas soluções e
+                amplia o
+                alcance da empresa.
+            </article>
+        </section>
+        <hr>
+        <section class="tools-api" id="api-tools">
+            <h2>Ferramentas relacionadas a APIs</h2>
+            <p>
+                &ensp; Há diversas ferramentas relacionadas a APIs, voltadas para diferentes funções enquanto
+                trabalhando com
+                elas.
+                Essas opções de ferramentas abrangem testes de API, documentações, facilitadores de conexão e criadores
+                de
+                API.
+            </p>
+            <ul class="tools-exemples">
+                <li><b>Postman:</b> usada para testar e simular requisições em APIs.</li>
+                <li><b>Swagger (OpenAPI)</b>: ajuda a documentar e visualizar como a API funciona.</li>
+                <li><b>RapidAPI</b>: plataforma para buscar e conectar APIs prontas.</li>
+                <li><b>Insomnia</b>: alternativa ao Postman, focada em testes e organização de requisições.</li>
+                <li><b>Apigee (Google)</b>: usada para criar, gerenciar e proteger APIs em ambientes empresariais.</li>
+                <li><b>Spring Boot</b>: framework Java que facilita a criação rápida e organizada de APIs RESTful,
+                    automatizando
+                    configurações e acelerando o desenvolvimento.</li>
+            </ul>
+            </div>
+            <hr>
+            <section class="apis-on-practicies" id="exemples">
+                <h2>Exemplos práticos de APIs</h2>
+                <p>
+                    &ensp; As APIs são amplamente usadas em diversos sistemas que temos contato no nosso dia a dia. No
+                    entanto,
+                    muitas
+                    vezes não percebemos o quão conetados estamos a elas, como quando usamos o google Maps ou vemos uma
+                    previsão
+                    do tempo. Alguns exemplos de API abaixo:
+                </p>
+                <ul>
+                    <li><b>Google Maps API</b>: permite integrar mapas em apps de entrega, mobilidade ou turismo.</li>
+                    <li><b>API do WhatsApp Business</b>: usada por empresas para automatizar mensagens e atendimentos.
+                    </li>
+                    <li><b>APIs de pagamento (ex: PayPal, Stripe, Mercado Pago)</b>: permitem integrar sistemas de
+                        checkout
+                        a
+                        lojas virtuais.</li>
+                    <li><b>API de clima (ex: OpenWeather)</b>: usada em apps que mostram previsão do tempo em tempo
+                        real.
+                    </li>
+                </ul>
+            </section>
+
+            <hr>
+            <section class="concl" id="conclusion">
+                <h1>Conclusão</h1>
+                <p>
+                    &ensp; Atualmente, o uso de APIs tem se tornado essencial para o desenvolvimento de sistemas
+                    modernos,
+                    permitindo
+                    que aplicações diferentes se conectem e troquem informações de forma padronizada. Como visto no
+                    texto, as
+                    APIs funcionam como conjuntos de regras que garantem essa comunicação, utilizando protocolos como
+                    HTTP, REST
+                    e SOAP para organizar as requisições e respostas.
+                </p>
+                <p>
+                    &ensp; Também foi mencionado que as APIs podem ser classificadas em tipos variados (privada, de
+                    parceiros e
+                    pública), cada uma adequada a diferentes necessidades. Além disso, o uso de ferramentas como
+                    Postman,
+                    Swagger e Spring Boot facilita a criação, o teste e a documentação dessas interfaces, acelerando o
+                    desenvolvimento e melhorando a qualidade das soluções.
+                </p>
+                <p>
+                    &ensp; Portanto, como discutido, a escolha adequada do tipo de API, do protocolo e das ferramentas
+                    está
+                    diretamente
+                    ligada à complexidade do projeto e aos objetivos do sistema, garantindo integrações mais eficientes
+                    e
+                    soluções mais flexíveis e escaláveis.
+                </p>
+            </section>
+    </main>
+    <footer>
+        <p id="footer-title"> &nbsp; Atividade - Programação Web </p>
+        <p> &emsp; 09/2025 </p>
+        <p><small>&copy; <sup>2025</sup> <sub>APIs e interações</sub>
+            </small></p>
+    </footer>
+</body>
+
+</html>

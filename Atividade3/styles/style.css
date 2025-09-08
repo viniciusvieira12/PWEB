@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --corprincipal: #F7F7F7;
+    --nav-color: rgba(51, 51, 51, 0.9);
+    --title-color: #054F77;
+    --font-action-color: #c57d56;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--corprincipal);
+    color: var(--nav-color);
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+.bgnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-color);
+}
+
+.nav-main {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.nav-title {
+    float: left;
+}
+
+.nav-title {
+    color: var(--corprincipal);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 10px;
+    display: inline-block;
+    line-height: 30px;
+}
+
+.nav-title:hover {
+    background-color: #555;
+    color: var(--font-action-color);
+    border-radius: 4px;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.nav-link {
+    color: var(--corprincipal);
+    text-decoration: none;
+    padding: 8px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #555;
+    color: var(--font-action-color);
+}
+
+main {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-title {
+    font-size: 26px;
+    color: var(--title-color);
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+main h1 {
+    color: var(--title-color);
+    font-size: 28px;
+    margin: 20px auto;
+}
+
+
+.api-image {
+    text-align: center;
+    
+}
+
+.api-image:hover {
+    transform: scale(1.1);
+}
+
+main h2 {
+    font-size: 22px;
+    color: var(--title-color);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+main p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+article {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+ul {
+    margin: 15px 0 20px 30px;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #cccccc;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+
+#footer-title {
+    color: var(--corprincipal);
+}
