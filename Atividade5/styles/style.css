@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90vw;
+  height: 90vw;
+  max-width: 500px;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+h2::before {
+  content: "";
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 420px) {
+  .container {
+    background-color: gray;
+  }
+
+  h2::before {
+    content: "Cinza";
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .container {
+    background-color: orange;
+  }
+
+  h2::before {
+    content: "Laranja";
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    background-color: pink;
+  }
+
+  h2::before {
+    content: "Rosa";
+    color: black;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+  .container {
+    background-color: red;
+  }
+
+  h2::before {
+    content: "Vermelho";
+  }
+}
+
+@media (min-width: 1081px) and (max-width: 1366px) {
+  .container {
+    background-color: purple;
+  }
+
+  h2::before {
+    content: "Roxo";
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1920px) {
+  .container {
+    background-color: yellow;
+  }
+
+  h2::before {
+    content: "Amarelo";
+    color: black;
+  }
+}
+
+@media (min-width: 1921px) {
+  .container {
+    background-color: green;
+  }
+
+  h2::before {
+    content: "Verde";
+  }
+}
