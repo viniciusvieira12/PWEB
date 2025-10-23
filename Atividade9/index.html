@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operações variadas</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <h1>Operações variadas</h1>
+
+    <div class="group">
+        <p>Insira 3 números para identificar o maior:</p>
+        <input type="number" id="maior1">
+        <input type="number" id="maior2">
+        <input type="number" id="maior3">
+        <br>
+        <button id="btnMaior" onclick="mostrarMaior()">Filtrar o maior</button>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <p>Insira 3 números para ordenar do menor ao maior:</p>
+        <input type="number" id="ordem1">
+        <input type="number" id="ordem2">
+        <input type="number" id="ordem3">
+        <br>
+        <button id="btnOrdem" onclick="ordenarNumeros()">Ordenar números</button>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <p>Insira uma frase para verificar se é um palíndromo:</p>
+        <input type="text" id="palavra" style="width:300px;">
+        <br>
+        <button id="btnPalavra" onclick="verificarPalindromo()">Verificar</button>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <p>Insira 3 números para verificar se formam um triângulo:</p>
+        <input type="number" id="lado1">
+        <input type="number" id="lado2">
+        <input type="number" id="lado3">
+        <br>
+        <button id="btnTriangulo" onclick="verificarTriangulo()">Verificar triângulo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
