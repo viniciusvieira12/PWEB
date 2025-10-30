@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício - criação de objetos</title>
+</head>
+<body>
+    <script>
+        //criando objeto e depois seus atributos
+        var aluno1 = new Object();
+        aluno1.ra = "0654321";
+        aluno1.nome = "Otavio Santos";
+        alert(`ra= ${aluno1.ra}, nome= ${aluno1.nome}`);
+
+        //criando objeto utilizando chaves{} e não o new, e criando atributos depois
+        var aluno2 = {};
+        aluno2.ra = "0123456";
+        aluno2["nome"] = "Otavio Santos";
+        alert("ra= " + aluno2.ra + ", nome= " + aluno2.nome);
+        aluno2["email do aluno"] = "otavio@outlook.com";
+        alert(aluno2["email do aluno"]);
+
+        //criando objeto declarando os atributos direto dentro das chaves{}
+        var aluno3 = {
+            ra: "0981234",
+            nome: "Otavio Santos",
+        }
+        alert("ra= " + aluno3.ra + ", nome= " + aluno3.nome);
+
+        //criando função para criar objeto (como faziam antes para simular uma classe)
+        function Aluno(ra, nome) {
+            this.ra = ra;
+            this.nome = nome;
+            this.MostrarDados = function() {
+                return "ra= " + this.ra + ", nome= " + this.nome;
+            }
+        }
+        var aluno4 = new Aluno("071593293", "Otavio Santos");
+        alert(aluno4.MostrarDados());
+        alert(aluno4.nome);
+
+        function Aluno2() {
+            var ra;
+            var nome;
+            this.setRa = function(value) {
+                this.ra = value;
+            }
+            this.getRa = function() {
+                return this.ra;
+            }
+            this.setNome = function(value) {
+                this.nome = value;
+            }
+            this.getNome = function() {
+                return this.nome;
+            }
+        }
+
+        var aluno5 = new Aluno2();
+        aluno5.setRa("0719344");
+        aluno5.setNome("Otavio Santos");
+        alert("ra= " + aluno5.getRa() + ", nome= " + aluno5.getNome());
+
+        function AlunoADS() {
+            var numLab;
+            this.setnumLab = function(value) {
+                this.numLab = value;
+            }
+            this.getnumLab = function() {
+                return this.numLab;
+            }
+        }
+        
+        //fazendo herança utilizando prototype
+        AlunoADS.prototype = new Aluno2();
+
+        var Aluno6 = new AlunoADS();
+        Aluno6.setRa("093348");
+        Aluno6.setNome("Otavio Santos");
+        Aluno6.setnumLab(8);
+        alert("ra= " + Aluno6.getRa() + ", nome= " + Aluno6.getNome() + ", numumero do lab= " + Aluno6.getnumLab());
+
+        //criando classe utilizando o class (convencional)
+        class Aluno1 {
+            constructor() {
+                this._ra;
+                this._nome;
+            }
+            setNome(value) {
+                this._nome = value;
+            }
+            getNome() {
+                return this._nome;
+            }
+            setRa(value) {
+                this._ra = value;
+            }
+            getRa() {
+                return this._ra;
+            }
+        }
+
+        var objAluno = new Aluno1();
+        objAluno.setRa("082234");
+        objAluno.setNome("Otavio Santos");
+        alert("ra= " + objAluno.getRa() + ", nome= " + objAluno.getNome());
+
+        class AlunoADS1 extends Aluno1 {
+            constructor() {
+                super();
+                this._numLab;
+            }
+            setnumLab(value) {
+                this._numLab = value;
+            }
+            getnumLab() {
+                return this._numLab;
+            }
+        }
+
+        var objAluno2 = new AlunoADS1();
+        objAluno2.setRa("0804326");
+        objAluno2.setNome("Otavio Santos");
+        objAluno2.setnumLab(8);
+        alert("ra= " + objAluno2.getRa() + ", nome= " + objAluno2.getNome() + ", numero do lab= " + objAluno2.getnumLab());
+    </script>
+</body>
+</html>
