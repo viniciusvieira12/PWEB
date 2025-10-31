@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Retângulo e Conta</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <h1>Criação de Retângulo e Conta</h1>
+
+    <div class="bloco">
+
+        <div class="painel">
+            <h2>Retângulo</h2>
+
+            <p>Base: <input type="text" id="base" placeholder="Ex: 10"></p>
+            <p>Altura: <input type="text" id="altura" placeholder="Ex: 5"></p>
+
+            <button onclick="criarRetangulo()">Criar</button>
+            <button onclick="exibirRetangulo()">Exibir</button>
+
+            <table id="tabelaRetangulo">
+                <thead>
+                    <tr>
+                        <th>Base</th>
+                        <th>Altura</th>
+                        <th>Área</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="retanguloBase">-</td>
+                        <td id="retanguloAltura">-</td>
+                        <td id="retanguloArea">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="painel">
+            <h2>Conta Corrente</h2>
+
+            <p>Nome Correntista: <input type="text" id="nomeCorrente" placeholder="Ex: Ana"></p>
+            <p>Banco: <input type="text" id="bancoCorrente" placeholder="Ex: Banco X"></p>
+            <p>Número da Conta: <input type="text" id="numeroCorrente" placeholder="Ex: 1234"></p>
+            <p>Saldo: <input type="text" id="saldoCorrente" placeholder="Ex: 1000"></p>
+            <p>Saldo Especial: <input type="text" id="saldoEspecial" placeholder="Ex: 500"></p>
+
+            <button onclick="criarCorrente()">Criar</button>
+            <button onclick="exibirCorrente()">Exibir</button>
+
+            <table id="tabelaCorrente">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Banco</th>
+                        <th>Número</th>
+                        <th>Saldo</th>
+                        <th>Saldo Especial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="correnteNome">-</td>
+                        <td id="correnteBanco">-</td>
+                        <td id="correnteNumero">-</td>
+                        <td id="correnteSaldo">-</td>
+                        <td id="correnteSaldoEspecial">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="painel">
+            <h2>Conta Poupança</h2>
+
+            <p>Nome Correntista: <input type="text" id="nomePoupanca" placeholder="Ex: João"></p>
+            <p>Banco: <input type="text" id="bancoPoupanca" placeholder="Ex: Banco Y"></p>
+            <p>Número da Conta: <input type="text" id="numeroPoupanca" placeholder="Ex: 5678"></p>
+            <p>Saldo: <input type="text" id="saldoPoupanca" placeholder="Ex: 2000"></p>
+            <p>Juros (%): <input type="text" id="jurosPoupanca" placeholder="Ex: 5"></p>
+            <p>Data Vencimento: <input type="date" id="dataVencimentoPoupanca"></p>
+
+            <button onclick="criarPoupanca()">Criar</button>
+            <button onclick="exibirPoupanca()">Exibir</button>
+
+            <table id="tabelaPoupanca">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Banco</th>
+                        <th>Número</th>
+                        <th>Saldo</th>
+                        <th>Juros</th>
+                        <th>Vencimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="poupancaNome">-</td>
+                        <td id="poupancaBanco">-</td>
+                        <td id="poupancaNumero">-</td>
+                        <td id="poupancaSaldo">-</td>
+                        <td id="poupancaJuros">-</td>
+                        <td id="poupancaVenc">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
